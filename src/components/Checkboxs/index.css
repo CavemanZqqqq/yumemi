@@ -1,0 +1,19 @@
+.checkbox-outer {
+  height: auto;
+  width: 100vw;
+  background-color: aqua;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  margin-bottom: 5vw;
+}
+.checkbox-outer div {
+  font-size: 2vw;
+  margin-left: 3vw;
+  margin-top: 2vw;
+}
+.checkbox-outer div input {
+  line-height: 3vw;
+  vertical-align: baseline;
+}
+/*# sourceMappingURL=./index.css.map */
