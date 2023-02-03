@@ -1,7 +1,6 @@
 import Axios from "./ajax";
 import base from './base'
-import Qs from 'qs'
-import { parse, stringify } from 'qs' 
+
 
 export const getPrefCode = ()=> Axios.get(base.getPrefectures)
 

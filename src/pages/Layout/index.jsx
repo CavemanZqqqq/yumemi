@@ -14,26 +14,14 @@ import { connect } from 'react-redux';
   const [prefCode,setPrefCode] = useState([])
   const [checkcity,setCheckcity] = useState(new Array(47).fill(0))
   const [pplist,setPplist] = useState([])
-  const [option,setOption] = useState([])
-  const [count,setcount] = useState(1)
-
-  //const forceUpdate = React.useCallback(() => updateState({}), []);
   useEffect(()=> {
 
       getPref()
       for (let i = 1; i < 48; i++) {
         getPopulations(i);
       }
-      //console.log(props)
-  },[])
 
-  // useEffect(()=>{
-    
-  //   setTimeout(() => {
-  //     setcount(count+1);
-  //   }, 300);
-    
-  // },[count])
+  },[])
 
   const selectedCity = (pref)=>{//0 北海道
     let list = checkcity;
@@ -44,9 +32,6 @@ import { connect } from 'react-redux';
       prefCode[pref].prefName,
       pplist[pref]
     ]);
-    //console.log(checkcity)
-    // console.log(option)
-    // setOption(optionlist)
   }
 
   const cancelCity = (pref)=>{

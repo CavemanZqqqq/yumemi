@@ -54,7 +54,6 @@ function Chart(props) {
     setcount(count+ 1)
   }
 
-    
   return (
     <div>
         <button onClick={updateMap}>確認</button>
