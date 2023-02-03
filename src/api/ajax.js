@@ -20,7 +20,7 @@ const service = Axios.create({
     //1.配置基础路径，超时时间
     baseURL:'https://opendata.resas-portal.go.jp',
     headers:{
-        "X-API-KEY":"lCOitlLwRFUsmIPU6X2aR5aTfSdNsGfp54YDDQqY"
+        "X-API-KEY":"qGf8nhtLtHZXOJl3ESn7spOW1cz009mnGs4fwHnG"
     },
     timeout:50000
 })
@@ -37,6 +37,7 @@ service.interceptors.request.use(config=>{
     if(config.method==='post') {
         config.data=qs.stringify(config.data)
     }
+    //console.log(config)
     return config;
 })
 
@@ -47,7 +48,7 @@ service.interceptors.response.use(res=>{
     //console.log(res.data.result)
     
     //错误判断500， 200
-
+    
     return res.data.result;    
 },err=>{
     //!!!写成了promises 报错！！

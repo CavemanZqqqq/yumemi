@@ -1,6 +1,6 @@
 .chart-outer {
-  height: 50vw;
-  width: 50vw;
+  min-height: 50vw;
+  min-width: 50vw;
   margin: 1vw auto;
   background-color: red;
 }

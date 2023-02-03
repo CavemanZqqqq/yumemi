@@ -1,17 +1,19 @@
 import Axios from "./ajax";
 import base from './base'
 import Qs from 'qs'
-import { parse, stringify } from 'qs'
-
-export const getBanner = (cityCode,preCode,addArea) => {
-    
-    Axios.get(base.banner,{params:{
-        cityCode,
-        preCode:
-        addArea
-        } } 
-       ).then((res)=>console.log(res,'22222'))
-}   
-    
+import { parse, stringify } from 'qs' 
 
 export const getPrefCode = ()=> Axios.get(base.getPrefectures)
+
+export const getCityCode = (params)=>Axios.get(base.getPrefName,{params:{
+    perfCode:params
+}})
+
+export const getPopulation = (param)=>Axios.get(base.getPopulation,{
+    params:{
+        cityCode : '-',
+        prefCode : param
+    }
+})
+//https://opendata.resas-portal.go.jp/api/v1/population/composition/perYear?cityCode=11362&prefCode=11
+//https://opendata.resas-portal.go.jp/api/v1/population/composition/perYear?cityCode=11362&prefCode=11

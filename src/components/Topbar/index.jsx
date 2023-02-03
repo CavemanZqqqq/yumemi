@@ -4,7 +4,7 @@ import './index.less'
 export default function Topbar() {
   return (
     <div className='topbar'>
-      xxx県別の総人口推移グラフ
+      都道府県別の総人口推移グラフ
     </div>
   )
 }
