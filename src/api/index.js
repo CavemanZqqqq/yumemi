@@ -14,5 +14,3 @@ export const getPopulation = (param)=>Axios.get(base.getPopulation,{
         prefCode : param
     }
 })
-//https://opendata.resas-portal.go.jp/api/v1/population/composition/perYear?cityCode=11362&prefCode=11
-//https://opendata.resas-portal.go.jp/api/v1/population/composition/perYear?cityCode=11362&prefCode=11

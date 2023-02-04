@@ -39,21 +39,16 @@ import { connect } from 'react-redux';
     list = checkcity;
     list[pref] = 0;
     setCheckcity(list);
-    //console.log(prefCode[pref].prefName)
     props.delCity(prefCode[pref].prefName)
-    //console.log(checkcity)
-    // setOption(optionlist)
   }
 
     async function getPopulations(prefcode){
       try{
         var data = await getPopulation(prefcode)
-        //console.log(data.data[0].data)
         var tmpList = []
         data.data[0].data.forEach(element => {
           tmpList.push(parseInt(element.value) )
         });
-        //console.log(tmpList)
         var tmp = pplist
         tmp.push(tmpList)
         setPplist(tmp);
@@ -67,7 +62,6 @@ import { connect } from 'react-redux';
         try{
           var data = await getPrefCode();
           setPrefCode(data);
-          //console.log(prefCode)
         } catch (error) {
           console.log(error)
         }
@@ -83,7 +77,7 @@ import { connect } from 'react-redux';
         <div className="checkBox_outer">
           <Checkboxs prefCodeTocity = {prefCode} select = {selectedCity} cancel = {cancelCity} check = {checkcity}/>
         </div>
-        {/* router output */}
+        {/* chart */}
         <Chart checked = {checkcity} perfCodes = {prefCode}></Chart>
     </div>
     

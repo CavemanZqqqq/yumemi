@@ -27,7 +27,6 @@ function Chart(props) {
     series:[
     ]
   })
-  //var newOption = option;
   
 
   useEffect(()=>{
@@ -56,7 +55,7 @@ function Chart(props) {
 
   return (
     <div>
-        <button onClick={updateMap}>確認</button>
+        <button id='bn1' onClick={updateMap}>確認</button>
         <div className="chart-outer" id = 'container'>
          
         </div>
