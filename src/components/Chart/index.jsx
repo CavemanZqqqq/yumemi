@@ -8,6 +8,9 @@ import { connect } from 'react-redux'
 function Chart(props) {
   const [count,setcount] = useState(1)
   const [option,setOption] = useState({
+    accessibility: {
+      enabled: false
+    },
     chart:{
       type:'line'
     },
